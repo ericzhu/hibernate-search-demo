@@ -30,7 +30,7 @@ public class StartupDataLoader implements ServletContextListener {
       }
       return sessionFactory.openSession();
    }
-
+   
    @Override
    public void contextDestroyed(ServletContextEvent event) {
       if (sessionFactory != null && !sessionFactory.isClosed()) {

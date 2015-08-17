@@ -12,31 +12,33 @@ import org.hibernate.search.annotations.Indexed;
 
 @Entity
 @Indexed
-public class Item implements Serializable{
+public class Item implements Serializable {
 
    private static final long serialVersionUID = -7147396673001233348L;
 
    @Id
    @GeneratedValue
-   private Long id;
+   private Long              id;
 
    @Column
    @Field
-   private String name;
+   private String            name;
 
    @Column(length = 1000)
    @Field
-   private String description;
+   private String            description;
 
    @Column
-   private String image;
+   private String            image;
 
-   public Item(String name, String description, String image) {
+   public Item(String name, String image, String description) {
       super();
       this.name = name;
       this.description = description;
       this.image = image;
    }
+
+   public Item() {}
 
    public Long getId() {
       return id;
